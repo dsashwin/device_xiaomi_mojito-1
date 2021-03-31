@@ -53,5 +53,8 @@ BOARD_USES_METADATA_PARTITION := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Inherit from proprietary files
 include vendor/xiaomi/mojito/BoardConfigVendor.mk
