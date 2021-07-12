@@ -12,6 +12,9 @@ DEVICE_PATH := device/xiaomi/mojito
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
+# HIDL
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
