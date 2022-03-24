@@ -332,6 +332,9 @@ vendor/firmware/CAMERA_ICP.elf
 # Camera Service
 lib/libcameraservice.so
 
+# Fingerprint
+vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.sm6150.so
+
 # IPA
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
