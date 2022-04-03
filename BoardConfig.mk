@@ -94,6 +94,7 @@ TARGET_SCREEN_DENSITY := 440
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Inherit from proprietary files
 include vendor/xiaomi/mojito/BoardConfigVendor.mk
