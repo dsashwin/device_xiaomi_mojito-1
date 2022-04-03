@@ -13,6 +13,7 @@ $(call inherit-product, device/xiaomi/mojito/device.mk)
 
 # Inherit some common PixelOS stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_NAME := aosp_mojito
 PRODUCT_DEVICE := mojito
