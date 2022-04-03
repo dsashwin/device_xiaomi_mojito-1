@@ -21,6 +21,34 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mojito
 TARGET_RECOVERY_DEVICE_MODULES := libinit_mojito
 
+# Kernel
+BOARD_BOOT_HEADER_VERSION := 2
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_PAGESIZE := 4096
+
+TARGET_KERNEL_CONFIG := neternels_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE += androidboot.memcg=1
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
+BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE += service_locator.enable=1
+BOARD_KERNEL_CMDLINE += swiotlb=1
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
+
+BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32 := arm-eabi-
+KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/arm64-gcc/bin
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_KERNEL_NEW_GCC_COMPILE := true
+TARGET_KERNEL_CLANG_COMPILE := false
+KERNEL_CROSS_COMPILE += NM=llvm-nm
+KERNEL_CROSS_COMPILE += OBJCOPY=llvm-objcopy
+KERNEL_CROSS_COMPILE += LD=ld.lld
+
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := mojito,sunny
 
