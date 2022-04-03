@@ -53,6 +53,9 @@ BOARD_USES_METADATA_PARTITION := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2022-01-01
+
 # Screen density
 TARGET_SCREEN_DENSITY := 440
 
