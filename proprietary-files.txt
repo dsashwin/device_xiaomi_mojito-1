@@ -48,7 +48,6 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 -vendor/lib/hw/audio.primary.sm6150.so
 -vendor/lib/libaudio_log_utils.so
 -vendor/lib/libaudioparsers.so
--vendor/lib/libaudioroute_ext.so
 
 # Audio extensions
 -vendor/lib/btaudio_offload_if.so
@@ -58,7 +57,7 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 -vendor/lib/libsndmonitor.so
 -vendor/lib/libspkrprot.so
 
-0~# Camera
+# Camera
 -vendor/lib64/camera/com.qti.sensor.imx318.so
 -vendor/lib64/camera/com.qti.sensor.ofilm_gc02m1.so
 -vendor/lib64/camera/com.qti.sensor.ofilm_imx355.so
@@ -121,7 +120,7 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libFaceGrade.so
 -vendor/lib64/libHalSuperSensorServer.so
 -vendor/lib64/libI420colorconvert.so
--vendor/lib64/libMegviiFacepp-0.5.2.so
+-vendor/lib64/libMegviiFacepp-0.5.2.so;MODULE=libMegviiFacepp-0.5.2_mojito
 -vendor/lib64/libSNPE.so
 -vendor/lib64/libSuperSensor.so
 -vendor/lib64/libSuperSensorCPU.so
@@ -155,7 +154,7 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libft2vendor.so
 -vendor/lib64/libhta_hexagon_runtime.so
 -vendor/lib64/libhvx_interface.so
--vendor/lib64/libmegface.so
+-vendor/lib64/libmegface.so;MODULE=libmegface_mojito
 -vendor/lib64/libmiStereoFactoryRemapLib.so
 -vendor/lib64/libmiai_portraitsupernight.so
 -vendor/lib64/libmiai_supernight.so
@@ -166,7 +165,7 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libmialgo_utils.so
 -vendor/lib64/libmialgoengine.so
 -vendor/lib64/libmibokeh_712.so
--vendor/lib64/libmpbase.so
+-vendor/lib64/libmpbase.so;MODULE=libmpbase_mojito
 -vendor/lib64/libremosaic_wrapper.so
 -vendor/lib64/libremosaiclib.so
 -vendor/lib64/libsdk_sr.so
@@ -333,7 +332,7 @@ vendor/firmware/CAMERA_ICP.elf
 -lib/libcameraservice.so
 
 # Fingerprint
--vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.sm6150.so
+-vendor/lib64/hw/fingerprint.fpc.default.so:vendor/lib64/hw/fingerprint.fpc.sm6150.so
 
 # IPA
 vendor/firmware/ipa_fws.b00
@@ -362,7 +361,7 @@ vendor/firmware/a630_sqe.fw
 vendor/firmware/a640_gmu.bin
 
 # Sensors
--vendor/bin/init.qcom.sensors.sh
+vendor/bin/init.qcom.sensors.sh
 -vendor/bin/sensors.qti
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
@@ -436,28 +435,24 @@ vendor/etc/elliptic_sensor.xml
 
 # Sensors Ultrasound
 vendor/etc/elliptic_sensor.xml
--vendor/lib64/libultrasound.so
 -vendor/lib64/libnotifyaudiohal.so
--vendor/lib64/sensors.elliptic.so
--vendor/lib64/sensors.mius.proximity.so
 
 # Thermal
 -vendor/bin/mi_thermald
 -vendor/bin/thermal-engine
-vendor/etc/init/init.mi_thermald.rc
+vendor/etc/init/init_thermal-engine.rc
+vendor/etc/thermal-4k.conf
+vendor/etc/thermal-arvr.conf
 vendor/etc/thermal-camera.conf
+vendor/etc/thermal-camera2.conf
 vendor/etc/thermal-chg-only.conf
-vendor/etc/thermal-class0.conf
 vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
 vendor/etc/thermal-mgame.conf
-vendor/etc/thermal-navigation.conf
 vendor/etc/thermal-nolimits.conf
 vendor/etc/thermal-normal.conf
 vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
-vendor/etc/thermal-video.conf
-vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
 -vendor/lib64/libthermalclient.so
 
